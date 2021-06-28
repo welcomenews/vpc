@@ -1,0 +1,12 @@
+---
+- name: Install Prometheus
+  hosts: all
+  become: yes
+  remote_user: root
+  gather_facts: yes
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+
+  roles:
+    - installation-prometheus
+    # - install-grafana
